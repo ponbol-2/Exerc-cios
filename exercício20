@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Texto Hover</title>
+</head>
+<body>
+    <p id="textoHover">Passe o mouse aqui</p>
+
+    <script>
+        const texto = document.getElementById('textoHover');
+
+        texto.addEventListener('mouseover', function() {
+            texto.innerText = 'Você passou o mouse!';
+        });
+
+        texto.addEventListener('mouseout', function() {
+            texto.innerText = 'Passe o mouse aqui';
+        });
+    </script>
+</body>
+</html>
