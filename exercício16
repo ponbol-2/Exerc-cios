@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Mudar Cor com Rádio</title>
+</head>
+<body>
+    <h1>Escolha uma Cor:</h1>
+
+    <input type="radio" name="cor" value="lightblue" onchange="mudarCor()"> Azul<br>
+    <input type="radio" name="cor" value="lightgreen" onchange="mudarCor()"> Verde<br>
+    <input type="radio" name="cor" value="lightpink" onchange="mudarCor()"> Rosa<br>
+    <input type="radio" name="cor" value="yellow" onchange="mudarCor()"> Amarelo<br>
+
+    <script>
+        function mudarCor() {
+            const corSelecionada = document.querySelector('input[name="cor"]:checked').value;
+            document.body.style.backgroundColor = corSelecionada;
+        }
+    </script>
+</body>
+</html>
