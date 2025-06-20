@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cronômetro</title>
+</head>
+<body>
+    <h1 id="tempo">0</h1>
+    <button onclick="iniciar()">Iniciar</button>
+    <button onclick="pausar()">Pausar</button>
+    <button onclick="zerar()">Zerar</button>
+
+    <script>
+        let tempo = 0;
+        let cron;
+
+        function iniciar() {
+            cron = setInterval(() => {
+                tempo++;
+                document.getElementById('tempo').innerText = tempo;
+            }, 1000);
+        }
+
+        function pausar() {
+            clearInterval(cron);
+        }
+
+        function zerar() {
+            clearInterval(cron);
+            tempo = 0;
+            document.getElementById('tempo').innerText = tempo;
+        }
+    </script>
+</body>
+</html>
