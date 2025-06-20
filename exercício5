@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Média de Notas</title>
+</head>
+<body>
+    <h1>Cálculo de Média</h1>
+    <input type="number" id="nota1" placeholder="Nota 1"><br>
+    <input type="number" id="nota2" placeholder="Nota 2"><br>
+    <input type="number" id="nota3" placeholder="Nota 3"><br>
+    <button onclick="calcular()">Calcular Média</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcular() {
+            const n1 = parseFloat(document.getElementById('nota1').value);
+            const n2 = parseFloat(document.getElementById('nota2').value);
+            const n3 = parseFloat(document.getElementById('nota3').value);
+
+            const media = (n1 + n2 + n3) / 3;
+            const status = (media >= 6) ? 'Aprovado' : 'Reprovado';
+
+            document.getElementById('resultado').innerText = `Média: ${media.toFixed(2)} - ${status}`;
+        }
+    </script>
+</body>
+</html>
