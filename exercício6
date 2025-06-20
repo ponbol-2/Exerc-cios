@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <section>
+        <h1>Meu Perfil</h1>
+        <img src="https://via.placeholder.com/150" alt="Foto de Perfil">
+        <p>Olá! Meu nome é João e sou apaixonado por tecnologia.</p>
+        <h3>Meus Hobbies:</h3>
+        <ul>
+            <li>Programar</li>
+            <li>Jogar videogame</li>
+            <li>Ouvir música</li>
+            <li>Assistir filmes</li>
+        </ul>
+    </section>
+</body>
+</html>
+
+//codigo.css
+
+body {
+    font-family: Arial;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+img {
+    border-radius: 50%;
+}
