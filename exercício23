@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkbox e Botão</title>
+</head>
+<body>
+    <input type="checkbox" id="checkPermissao"> Aceito os termos<br><br>
+    <button id="btnEnviar" disabled>Enviar</button>
+
+    <script>
+        const check = document.getElementById('checkPermissao');
+        const btn = document.getElementById('btnEnviar');
+
+        check.addEventListener('change', function() {
+            btn.disabled = !check.checked;
+        });
+    </script>
+</body>
+</html>
