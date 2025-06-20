@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Temperatura</title>
+</head>
+<body>
+    <input type="number" id="valor" placeholder="Valor"><br>
+    <button onclick="paraC()">Converter para °C</button>
+    <button onclick="paraF()">Converter para °F</button>
+    <p id="resultado"></p>
+
+    <script>
+        function paraC() {
+            const v = parseFloat(document.getElementById('valor').value);
+            const r = (v - 32) * (5/9);
+            document.getElementById('resultado').innerText = `${r.toFixed(2)} °C`;
+        }
+
+        function paraF() {
+            const v = parseFloat(document.getElementById('valor').value);
+            const r = (v * 9/5) + 32;
+            document.getElementById('resultado').innerText = `${r.toFixed(2)} °F`;
+        }
+    </script>
+</body>
+</html>
