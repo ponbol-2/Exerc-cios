@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Mudar Cor de Fundo</title>
+</head>
+<body>
+    <h1>Mudar Cor de Fundo</h1>
+    <button onclick="mudarCor()">Mudar Cor</button>
+
+    <script>
+        function mudarCor() {
+            const cores = ['lightblue', 'lightgreen', 'lightpink', 'yellow', 'orange', 'lavender', 'white', 'beige'];
+            const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
+            document.body.style.backgroundColor = corAleatoria;
+        }
+    </script>
+</body>
+</html>
