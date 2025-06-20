@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Contato</title>
+</head>
+<body>
+    <h1>Contato</h1>
+    <form>
+        <label>Nome:</label><br>
+        <input type="text"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email"><br><br>
+
+        <label>Assunto:</label><br>
+        <input type="text"><br><br>
+
+        <label>Mensagem:</label><br>
+        <textarea></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+
+//exercicio 8
+
+<script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(e) {
+        const campos = form.querySelectorAll('input, textarea');
+        for (let campo of campos) {
+            if (campo.value.trim() === '') {
+                alert('Por favor, preencha todos os campos!');
+                e.preventDefault();
+                return;
+            }
+        }
+        alert('Formulário enviado com sucesso!');
+    });
+</script>
+``>
+Adicione esse `<script>` no final do exercício 7.
+
+---
+
+## 🎨 **9 - Mudar Cor de Fundo com Botão**
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Mudar Cor de Fundo</title>
+</head>
+<body>
+    <button onclick="mudarCor()">Mudar Cor</button>
+
+    <script>
+        function mudarCor() {
+            document.body.style.backgroundColor = 'lightblue';
+        }
+    </script>
+</body>
+</html>
