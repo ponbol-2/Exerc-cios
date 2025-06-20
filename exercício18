@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Botão Colorido</title>
+</head>
+<body>
+    <button id="btnCor">Clique para mudar a cor</button>
+
+    <script>
+        const btn = document.getElementById('btnCor');
+        btn.addEventListener('click', function() {
+            const cores = ['red', 'green', 'blue', 'purple', 'orange', 'pink'];
+            const cor = cores[Math.floor(Math.random() * cores.length)];
+            btn.style.backgroundColor = cor;
+        });
+    </script>
+</body>
+</html>
